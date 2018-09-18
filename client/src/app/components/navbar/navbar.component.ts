@@ -30,7 +30,4 @@ export class NavbarComponent {
 			}
 		];
 	}
-	ngOnDestroy() {
-		this._subscription.unsubscribe();
-	}
 }

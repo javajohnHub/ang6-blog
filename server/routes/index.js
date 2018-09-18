@@ -14,7 +14,7 @@ mongoose.connect(
     }
   }
 );
-var postSchema = new mongoose.Schema({ body: String });
+var postSchema = new mongoose.Schema({ body: String, _id: Number });
 var Post = mongoose.model("Post", postSchema);
 
 /* GET home page. */
@@ -29,10 +29,21 @@ router.get("/posts", function(req, res, next) {
 });
 
 router.post("/addpost", (req, res) => {
-  console.log(req);
   var postData = new Post(req.body);
   postData.save().catch(err => {
     res.status(400).send("Unable to save data");
+  });
+});
+
+router.put("/addpost", (req, res) => {
+  Post.findById(id, function(err, post) {
+    if (err) return handleError(err);
+
+    post.body = req.body;
+    post.save(function(err, updatedPost) {
+      if (err) return handleError(err);
+      res.send(updatedPost);
+    });
   });
 });
 module.exports = router;

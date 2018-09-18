@@ -66614,7 +66614,7 @@ var HomeComponent = /** @class */ (function () {
         this._http
             .put('https://ang6-blog.herokuapp.com/post', {
             body: this.body,
-            _id: this.id
+            id: this.id
         })
             .subscribe(function (postReply) {
             console.log(postReply);
@@ -66622,7 +66622,7 @@ var HomeComponent = /** @class */ (function () {
     };
     HomeComponent.prototype.delete = function () {
         this._http
-            .delete('https://ang6-blog.herokuapp.com/post')
+            .delete('https://ang6-blog.herokuapp.com/post', this.id)
             .subscribe(function (postReply) {
             console.log(postReply);
         });

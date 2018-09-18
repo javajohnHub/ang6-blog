@@ -33,7 +33,7 @@ export class HomeComponent {
 		this._http
 			.put<any>('https://ang6-blog.herokuapp.com/post', {
 				body: this.body,
-				_id: this.id
+				id: this.id
 			})
 			.subscribe(postReply => {
 				console.log(postReply);
@@ -42,7 +42,7 @@ export class HomeComponent {
 
 	delete() {
 		this._http
-			.delete<any>('https://ang6-blog.herokuapp.com/post')
+			.delete<any>('https://ang6-blog.herokuapp.com/post', this.id)
 			.subscribe(postReply => {
 				console.log(postReply);
 			});

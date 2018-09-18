@@ -1,6 +1,19 @@
 var express = require("express");
 var router = express.Router();
 var mongoose = require("mongoose");
+const MONGO_URL =
+  "mongodb://admin:admin123@ds261332.mlab.com:61332/heroku_cc8hqd82";
+
+mongoose.connect(
+  MONGO_URL,
+  (err, db) => {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log("connected");
+    }
+  }
+);
 var postSchema = new mongoose.Schema({ body: String });
 var Post = mongoose.model("Post", postSchema);
 

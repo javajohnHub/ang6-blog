@@ -7,18 +7,7 @@ var bodyParser = require("body-parser");
 var cors = require("cors");
 var cons = require("consolidate");
 var index = require("./routes/index");
-var mongoose = require("mongoose");
-const MONGO_URL =
-  "mongodb://admin:admin123@ds261332.mlab.com:61332/heroku_cc8hqd82";
 
-mongoose.connect(
-  MONGO_URL,
-  (err, db) => {
-    if (err) {
-      console.log(err);
-    } else {
-      console.log("connected");
-    }
 
     // // Do something with db here, like inserting a record
     // db.collection('notes').insertOne(

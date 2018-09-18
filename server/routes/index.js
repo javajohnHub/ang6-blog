@@ -29,7 +29,7 @@ router.get("/posts", function(req, res, next) {
 });
 
 router.post("/addpost", (req, res) => {
-  console.log(req.body);
+  console.log(req);
   var postData = new Post(req.body);
   postData.save().catch(err => {
     res.status(400).send("Unable to save data");

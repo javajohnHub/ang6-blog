@@ -5992,7 +5992,7 @@ window.global = window;
 
 /***/ }),
 
-/***/ 2:
+/***/ 1:
 /*!**********************************************************************!*\
   !*** multi C:/Users/joedw/Desktop/ang6-blog/client/src/polyfills.ts ***!
   \**********************************************************************/
@@ -6004,4 +6004,4 @@ module.exports = __webpack_require__(/*! C:\Users\joedw\Desktop\ang6-blog\client
 
 /***/ })
 
-},[[2,"runtime"]]]);
+},[[1,"runtime"]]]);

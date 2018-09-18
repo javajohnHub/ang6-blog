@@ -7,11 +7,11 @@ var bodyParser = require("body-parser");
 var cors = require("cors");
 var cons = require("consolidate");
 var index = require("./routes/index");
-const MongoClient = require("mongodb").MongoClient;
+var mongoose = require("mongoose");
 const MONGO_URL =
   "mongodb://admin:admin123@ds261332.mlab.com:61332/heroku_cc8hqd82";
 
-MongoClient.connect(
+mongoose.connect(
   MONGO_URL,
   (err, db) => {
     if (err) {

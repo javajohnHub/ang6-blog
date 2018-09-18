@@ -15,9 +15,9 @@ MongoClient.connect(
   MONGO_URL,
   (err, db) => {
     if (err) {
-      return console.log(err);
+      console.log(err);
     } else {
-      return console.log("connected");
+      console.log("connected");
     }
 
     // // Do something with db here, like inserting a record

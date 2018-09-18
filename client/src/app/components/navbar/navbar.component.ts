@@ -15,7 +15,7 @@ export class NavbarComponent {
 	ngOnInit() {
 		this.items = [
 			{
-				label: 'Node-Bowshock',
+				label: 'Angular 6 Blog',
 				title: '',
 				items: [
 					{

@@ -74226,7 +74226,7 @@ var NavbarComponent = /** @class */ (function () {
         var _this = this;
         this.items = [
             {
-                label: 'Node-Bowshock',
+                label: 'Angular 6 Blog',
                 title: '',
                 items: [
                     {

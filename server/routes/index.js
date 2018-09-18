@@ -7,7 +7,7 @@ var Post = mongoose.model("Post", postSchema);
 /* GET home page. */
 router.get("/", function(req, res, next) {
   Post.find({}, (err, posts) => {
-    res.render("dist/index.html", { posts: posts });
+    res.json({ posts: posts });
   });
 });
 

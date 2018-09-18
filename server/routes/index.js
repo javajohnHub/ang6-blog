@@ -11,7 +11,7 @@ router.get("/", function(req, res, next) {
   });
 });
 
-app.post("/addpost", (req, res) => {
+router.post("/addpost", (req, res) => {
   var postData = new Post(req.body);
   postData
     .save()

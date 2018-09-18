@@ -1,5 +1,6 @@
 var express = require("express");
 var router = express.Router();
+var mongoose = require("mongoose");
 var postSchema = new mongoose.Schema({ body: String });
 var Post = mongoose.model("Post", postSchema);
 

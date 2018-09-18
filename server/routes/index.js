@@ -28,22 +28,43 @@ router.get("/posts", function(req, res, next) {
   });
 });
 
-router.post("/addpost", (req, res) => {
+router.post("/post", (req, res) => {
   var postData = new Post(req.body);
   postData.save().catch(err => {
     res.status(400).send("Unable to save data");
   });
 });
 
-router.put("/addpost", (req, res) => {
-  Post.findById(id, function(err, post) {
-    if (err) return handleError(err);
+router.put("/post", (req, res) => {
+  //   Post.findById(req.id, function(err, post) {
+  //     if (err) return handleError(err);
 
-    post.body = req.body;
-    post.save(function(err, updatedPost) {
-      if (err) return handleError(err);
-      res.send(updatedPost);
-    });
-  });
+  //     post.body = req.body;
+  //     post.save(function(err, updatedPost) {
+  //       if (err) return handleError(err);
+  //       res.send(updatedPost);
+  //     });
+  //   });
+  Post.findByIdAndUpdate(
+    // the id of the item to find
+    req._Id,
+
+    // the change to be made. Mongoose will smartly combine your existing
+    // document with this change, which allows for partial updates too
+    req.body,
+
+    // an option that asks mongoose to return the updated version
+    // of the document instead of the pre-updated one.
+    { new: true },
+
+    // the callback function
+    (err, post) => {
+      // Handle any possible database errors
+      if (err) return res.status(500).send(err);
+      return res.send(post);
+    }
+  );
 });
+
+router.delete("/post", (req, res) => {});
 module.exports = router;

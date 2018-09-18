@@ -1,2 +1,5 @@
 <input type="text" [(ngModel)]="body">
 <button type="button" (click)="post()" pButton label="Post"></button>
+<button type="button" (click)="update()" pButton label="Update"></button>
+
+{{posts | json}}

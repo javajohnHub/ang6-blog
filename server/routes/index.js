@@ -17,13 +17,8 @@ router.get("/posts", function(req, res, next) {
 
 router.post("/addpost", (req, res) => {
   var postData = new Post(req.body);
-  postData
-    .save()
-    .then(result => {
-      res.redirect("/");
-    })
-    .catch(err => {
-      res.status(400).send("Unable to save data");
-    });
+  postData.save().catch(err => {
+    res.status(400).send("Unable to save data");
+  });
 });
 module.exports = router;

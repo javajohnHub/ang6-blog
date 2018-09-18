@@ -1,5 +1,7 @@
-<input type="text" [(ngModel)]="body">
-<button type="button" (click)="post()" pButton label="Post"></button>
-<button type="button" (click)="update()" pButton label="Update"></button>
+Body: <input type="text" [(ngModel)]="body"><br />
+Id: <input type="text" [(ngModel)]="id"><br />
+<button type="button" (click)="post()" pButton label="Post"></button><br />
+<button type="button" (click)="update()" pButton label="Update"></button><br />
+<button type="button" (click)="delete()" pButton label="Delete"></button><br />
 
 {{posts | json}}

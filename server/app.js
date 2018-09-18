@@ -8,24 +8,21 @@ var cors = require("cors");
 var cons = require("consolidate");
 var index = require("./routes/index");
 
-
-    // // Do something with db here, like inserting a record
-    // db.collection('notes').insertOne(
-    //     {
-    //         title: 'Hello MongoDB',
-    //         text: 'Hopefully this works!'
-    //     },
-    //     function (err, res) {
-    //         if (err) {
-    //             db.close();
-    //             return console.log(err);
-    //         }
-    //         // Success
-    //         db.close();
-    //     }
-    // )
-  }
-);
+// // Do something with db here, like inserting a record
+// db.collection('notes').insertOne(
+//     {
+//         title: 'Hello MongoDB',
+//         text: 'Hopefully this works!'
+//     },
+//     function (err, res) {
+//         if (err) {
+//             db.close();
+//             return console.log(err);
+//         }
+//         // Success
+//         db.close();
+//     }
+// )
 
 var app = express();
 

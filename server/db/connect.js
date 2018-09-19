@@ -9,9 +9,9 @@ const connectToDb = async () => {
       config.mongoUrl,
       { useMongoClient: true }
     );
-    logger.info("Connected to mongo!!!");
+    //logger.info("Connected to mongo!!!");
   } catch (err) {
-    logger.error("Could not connect to MongoDB");
+    //logger.error("Could not connect to MongoDB");
   }
 };
 

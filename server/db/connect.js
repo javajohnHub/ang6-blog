@@ -1,5 +1,5 @@
-import mongoose from "mongoose";
-import config from "../config/index";
+let mongoose = require("mongoose");
+let config = require("../config/index");
 
 mongoose.Promise = global.Promise;
 

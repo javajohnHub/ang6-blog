@@ -58,5 +58,5 @@ server.use("/api", posts);
 server.use("/auth", auth);
 server.use("/user", passport.authenticate("jwt", { session: false }), user);
 server.listen(process.env.PORT, () => {
-  console.log("server started - 3005");
+  console.log("server started - ", process.env.PORT);
 });

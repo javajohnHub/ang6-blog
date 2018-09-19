@@ -1,6 +1,6 @@
 let mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-import passportLocalMongoose from "passport-local-mongoose";
+let passportLocalMongoose = require("passport-local-mongoose");
 
 let userSchema = new Schema({
   firstName: String,

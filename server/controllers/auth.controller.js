@@ -75,4 +75,4 @@ AuthController.profile = async (req, res) => {
   }
 };
 
-export default AuthController;
+module.exports = AuthController;

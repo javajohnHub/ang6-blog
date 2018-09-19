@@ -20,10 +20,10 @@ export const generateToken = (req, res, next) => {
   );
   next();
 };
-
-export const respond = (req, res) => {
+const respond = (req, res) => {
   res.status(200).json({
     user: req.user.username,
     token: req.token
   });
 };
+module.exports = respond;

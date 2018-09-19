@@ -122,4 +122,4 @@ CustomerController.deletePost = async (req, res) => {
   }
 };
 
-export default CustomerController;
+module.exports = CustomerController;

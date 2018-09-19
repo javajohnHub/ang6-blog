@@ -26,4 +26,4 @@ router.put("/posts/:cuid", (req, res) => {
 router.delete("/posts/:cuid", (req, res) => {
   CustomerController.deletePost(req, res);
 });
-export default router;
+module.exports = router;

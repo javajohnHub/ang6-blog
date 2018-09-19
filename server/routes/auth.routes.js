@@ -22,4 +22,4 @@ router.post("/profile", (req, res) => {
   AuthController.profile(req, res);
 });
 
-export default router;
+module.exports = router;

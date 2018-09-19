@@ -10,4 +10,4 @@ const customerSchema = new Schema({
 
 const Customer = mongoose.model("Post", customerSchema);
 
-export default Customer;
+module.exports = Customer;

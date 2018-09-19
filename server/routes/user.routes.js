@@ -11,4 +11,4 @@ router.get("/profile", function(req, res, next) {
   res.send(req.user);
 });
 
-export default router;
+module.exports = router;

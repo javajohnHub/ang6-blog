@@ -25,4 +25,4 @@ router.put("/posts/:cuid", (req, res) => {
 router.delete("/posts/:cuid", (req, res) => {
   PostController.deletePost(req, res);
 });
-export default router;
+module.exports = router;

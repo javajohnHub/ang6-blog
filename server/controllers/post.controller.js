@@ -101,4 +101,4 @@ PostController.deletePost = async (req, res) => {
   }
 };
 
-export default PostController;
+module.exports = PostController;
